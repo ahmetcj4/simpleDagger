@@ -10,8 +10,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 @Component(modules = {
         AndroidSupportInjectionModule.class,
         ActivityBindingModule.class,
-        BuildModule.class,
-        RandomDoubleModule.class
+        BuildModule.class
 })
 
 @AppScope

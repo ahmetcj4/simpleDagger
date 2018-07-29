@@ -1,6 +1,6 @@
 package com.zrr.simpledagger.di;
 
-import com.zrr.simpledagger.di.scope.AppScope;
+import com.zrr.simpledagger.di.scope.ActivityScope;
 
 import dagger.Module;
 import dagger.Provides;
@@ -8,7 +8,7 @@ import dagger.Provides;
 @Module
 final class RandomDoubleModule {
     @Provides
-    @AppScope
+    @ActivityScope
     static Double provideRandomDouble() {
         return Math.random();
     }
