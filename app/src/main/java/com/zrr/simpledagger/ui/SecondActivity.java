@@ -1,9 +1,7 @@
 package com.zrr.simpledagger.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
 import com.zrr.simpledagger.R;
@@ -13,8 +11,8 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class MainActivity extends DaggerAppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class SecondActivity extends DaggerAppCompatActivity {
+    private static final String TAG = SecondActivity.class.getSimpleName();
 
     @Inject
     @Model
@@ -29,13 +27,6 @@ public class MainActivity extends DaggerAppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.i(TAG, "onCreate: model: " + model);
-        TextView textView = findViewById(R.id.text);
-        textView.setText(String.valueOf(randomDouble));
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
-            }
-        });
+        ((TextView) findViewById(R.id.text)).setText(String.valueOf(randomDouble));
     }
 }
