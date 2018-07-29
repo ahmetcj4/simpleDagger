@@ -1,7 +1,6 @@
 package com.zrr.simpledagger.di;
 
 import com.zrr.simpledagger.App;
-import com.zrr.simpledagger.main.MainActivityModule;
 
 import dagger.Component;
 import dagger.android.AndroidInjector;
@@ -9,7 +8,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Component(modules = {
         AndroidSupportInjectionModule.class,
-        MainActivityModule.class,
+        ActivityBindingModule.class,
         BuildModule.class
 })
         /* @ApplicationScoped and/or @Singleton */

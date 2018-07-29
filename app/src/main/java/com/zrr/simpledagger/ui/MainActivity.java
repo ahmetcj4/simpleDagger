@@ -1,4 +1,4 @@
-package com.zrr.simpledagger.main;
+package com.zrr.simpledagger.ui;
 
 import android.os.Bundle;
 import android.util.Log;
